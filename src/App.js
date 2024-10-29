@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Rule from './components/Rule'; // Import the Rule component
+import Rule from './components/Rule';
 
 function App() {
   const [policyName, setPolicyName] = useState('');
@@ -15,13 +15,27 @@ function App() {
     setPolicyName(event.target.value);
   };
 
-  // ... (other event handlers for policy details)
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
+
+  const handlePolicyTypeChange = (event) => {
+    setPolicyType(event.target.value);
+  };
+
+  const handleDdosProtectionChange = (event) => {
+    setDdosProtection(event.target.checked);
+  };
 
   const addRule = (newRule) => {
     setRules([...rules, newRule]);
   };
 
-  // ... (event handlers for adaptive protection)
+  const handleAdaptiveProtectionChange = (event) => {
+    setAdaptiveProtection(event.target.checked);
+  };
+
+  // ... (add event handlers for adaptiveProtectionConfig fields)
 
   const generateYaml = () => {
     let yaml = 'securityPolicy:\n';
@@ -70,14 +84,42 @@ function App() {
         <label htmlFor="policyName">Policy Name:</label>
         <input type="text" id="policyName" value={policyName} onChange={handlePolicyNameChange} />
       </div>
-      {/* ... (other input fields for policy details) */}
+      <div>
+        <label htmlFor="description">Description:</label>
+        <textarea id="description" value={description} onChange={handleDescriptionChange} />
+      </div>
+      <div>
+        <label htmlFor="policyType">Policy Type:</label>
+        <select id="policyType" value={policyType} onChange={handlePolicyTypeChange}>
+          <option value="CLOUD_ARMOR">CLOUD_ARMOR</option>
+          <option value="CLOUD_ARMOR_EDGE">CLOUD_ARMOR_EDGE</option>
+        </select>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="ddosProtection"
+          checked={ddosProtection}
+          onChange={handleDdosProtectionChange}
+        />
+        <label htmlFor="ddosProtection">Enable DDoS Protection</label>
+      </div>
 
       <h2>Rules</h2>
-      <Rule onAddRule={addRule} /> {/* Pass the addRule function to the Rule component */}
+      <Rule onAddRule={addRule} />
       {/* ... (display rules) */}
 
       <h2>Advanced Options</h2>
-      {/* ... (input fields for adaptive protection) */}
+      <div>
+        <input
+          type="checkbox"
+          id="adaptiveProtection"
+          checked={adaptiveProtection}
+          onChange={handleAdaptiveProtectionChange}
+        />
+        <label htmlFor="adaptiveProtection">Enable Adaptive Protection</label>
+      </div>
+      {/* ... (input fields for adaptiveProtectionConfig) */}
 
       <button onClick={generateYaml}>Generate YAML</button>
       <textarea value={generatedYaml} readOnly />
