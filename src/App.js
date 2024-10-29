@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Rule from './components/Rule'; // Import the Rule component
 
 function App() {
   const [policyName, setPolicyName] = useState('');
