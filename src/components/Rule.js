@@ -175,11 +175,6 @@ function Rule() {
         )}
       </div>
 
-      <button onClick={() => console.log(generateYaml())}>
-        Generate YAML
-      </button>
-            {/* Read-only textarea to display the generated YAML */}
-            <textarea value={generatedYaml} readOnly />
 
       <h3>Preconfigured Rule Bundles</h3>
       <select value={selectedBundle} onChange={handleBundleChange}>
