@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rovindra.github.io/cloud-armor-policies/static/css/main.e6c13ad2.css",
+    "main.js": "/rovindra.github.io/cloud-armor-policies/static/js/main.82e44be2.js",
+    "static/js/453.204c53fd.chunk.js": "/rovindra.github.io/cloud-armor-policies/static/js/453.204c53fd.chunk.js",
+    "index.html": "/rovindra.github.io/cloud-armor-policies/index.html",
+    "main.e6c13ad2.css.map": "/rovindra.github.io/cloud-armor-policies/static/css/main.e6c13ad2.css.map",
+    "main.82e44be2.js.map": "/rovindra.github.io/cloud-armor-policies/static/js/main.82e44be2.js.map",
+    "453.204c53fd.chunk.js.map": "/rovindra.github.io/cloud-armor-policies/static/js/453.204c53fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.82e44be2.js"
+  ]
+}
