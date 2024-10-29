@@ -1,6 +1,6 @@
 {
   "name": "cloud-armor-policy-generator",
-  "homepage": "rovindra.github.io/cloud-armor-policies"
+  "homepage": "rovindra.github.io/cloud-armor-policies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
